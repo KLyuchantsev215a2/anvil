@@ -1,0 +1,4 @@
+﻿  main.cpp
+c:\my documents\visual studio 2017\projects\anvil1\anvil1\main.cpp(27): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+  anvil1.vcxproj -> C:\My documents\Visual Studio 2017\Projects\anvil1\Debug\anvil1.exe
+  anvil1.vcxproj -> C:\My documents\Visual Studio 2017\Projects\anvil1\Debug\anvil1.pdb (Partial PDB)
