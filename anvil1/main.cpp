@@ -56,8 +56,6 @@ void main() {
 	iron_particle tmp_particle_initialization;
 	iron_particle *X=NULL;
 
-	/*инициализация частиц*/
-	// X = tmp_particle_initialization.particle_initialization(x, N, h_const, m); // Old code.
 	X = X->particle_initialization(x, N, h_const, m);
 
 	for (int i = 0; i < N; i++) {
