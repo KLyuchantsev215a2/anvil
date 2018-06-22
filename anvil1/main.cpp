@@ -18,7 +18,8 @@ void main() {
 	double h_const = 0.076;
 
 	double density_0 = 7.85;
-	double V_0 = 200;
+	double V_0 = 0;
+	double V_1 = -200;
 
 	double high = 2.54;
 	double thick = 0.76;
@@ -30,6 +31,11 @@ void main() {
 
 
 	std::vector<std::vector<double> > x(N + N_x + N_y + 1);   //координаты каждой частицы газа
+	
+	
+	
+	
+	
 	std::cout << N_x << " " << N_y << " " << N_x*N_y << "\n";
 
 	for (int i = 0; i <N; i++) {
@@ -49,14 +55,23 @@ void main() {
 		x[i][0] = 0;
 		x[i][1] = (i - N - N_x)*high / double(N_y);
 	}
-
 	N = N + N_x + N_y + 1;
+
 	double m = density_0*area / double(N);
 
-	iron_particle tmp_particle_initialization;
+	std::vector<std::vector<double> > v(N);	
+
+	for (int i = 0; i < N; i++) {
+		v[i].resize(2);
+		v[i][0] = V_0;
+		v[i][1] = V_1;
+	}
+
 	iron_particle *X=NULL;
 
-	X = X->particle_initialization(x, N, h_const, m);
+	std::cout << N_x<<" "<<N_y << "% \n";
+
+	X = X->particle_initialization(x, N, h_const, m,v);
 
 	for (int i = 0; i < N; i++) {
 		X[i].ro = X[i].ro_particle(X, N);
@@ -74,6 +89,7 @@ void main() {
 	for (int i = 0; i < N; i++) {
 		output_t_0 << X[i].x_coordinat[0] << " " << X[i].x_coordinat[1] << " " << X[i].ro << "\n";
 	}
+
 	elapsedTime = clock() - elapsedTime;
 	printf("It took me %d clicks (%f seconds).\n", elapsedTime, ((float)elapsedTime) / CLOCKS_PER_SEC);
 

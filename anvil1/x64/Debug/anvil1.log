@@ -1,0 +1,4 @@
+﻿  particle.cpp
+c:\my documents\visual studio 2017\projects\anvil1\anvil\anvil1\particle.cpp(25): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  anvil1.vcxproj -> C:\My documents\Visual Studio 2017\Projects\anvil1\anvil\x64\Debug\anvil1.exe
+  anvil1.vcxproj -> C:\My documents\Visual Studio 2017\Projects\anvil1\anvil\x64\Debug\anvil1.pdb (Partial PDB)

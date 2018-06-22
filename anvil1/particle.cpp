@@ -112,10 +112,10 @@ double iron_particle::ro_particle(iron_particle *X, int N) {
 
 
 
-double iron_particle::Viscosity(iron_particle X, double gamma) {
+double iron_particle::Viscosity(iron_particle X, double gamma) {//одномерная вязкость
 	double r_ab = ((this->x_coordinat[0]) - (X.x_coordinat[0]));
 	/*узнать точные условия на вязкость*/  /*близкие частицы*/               /*только проблемные частицы*/
-	if ((this->V - X.V)* r_ab>0)
+	if ((this->v[0] - X.v[0])* r_ab>0)
 		return 0;
 	/*
 	double a = 1.;   //никак в статье одномерный случай
